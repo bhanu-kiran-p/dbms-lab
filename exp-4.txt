@@ -1,0 +1,64 @@
+-- select empno, ename, (sal) , (sal+comm), (12*sal) from scott.emp;
+
+
+-- select * from scott.emp where deptno = 20 and sal > 2000;
+
+-- select * from scott.emp where deptno=10 or deptno = 30;
+
+-- select empno, ename, sal "salary", comm "commission", sal+comm "sal and comm", 12*(sal+comm) "annual salary", sal + comm "avg_salary" from scott.EMP;
+
+-- select * from scott.emp where (deptno = 10 or deptno = 30);
+
+-- select * from scott.emp where not deptno = 30;
+
+-- select * from scott.emp where sal between 2000 and 5000;
+
+-- select * from scott.emp where comm is null;
+
+-- select * from scott.emp where mgr is null;
+
+-- select * from scott.emp where ename like 'S%';
+
+-- select * from scott.emp where ename like 'S%H';
+
+-- select * from scott.emp where ename like 'S__H'; -- _ can only replace one character
+-- select * from scott.emp where ename like 'S___H';
+-- select * from scott.emp where ename like '_____R';
+
+-- -- SET OPERATORS
+-- select * from scott.emp where deptno=10
+-- UNION
+-- select * from scott.emp where deptno=30;
+
+-- select * from emp where deptno=10
+-- union
+-- select * from scott.emp where deptno=20
+-- ;
+
+-- select * from scott.emp where deptno=10
+-- intersect
+-- select * from scott.emp where deptno=20;
+
+-- select deptno from scott.EMP
+-- union all
+-- select deptno from scott.dept;
+
+-- select deptno from scott.EMP
+-- intersect
+-- select deptno from scott.dept;
+
+-- select deptno from scott.DEPT
+-- minus 
+-- select deptno from scott.emp;
+
+-- select deptno from scott.dept
+-- union
+-- select deptno from scott.emp;
+
+-- select deptno from scott.EMP
+-- minus
+-- select deptno from scott.dept;
+
+select deptno from scott.emp
+union all
+select deptno from scott.dept;
